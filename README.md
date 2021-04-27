@@ -58,7 +58,6 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * The output of the model should be the last batch of word scores after a complete sequence has been processed.That is,for each input sequence of words, we only want to output     the word scores for a single, most likely, next word.
 #### init_hidden - The Initialization Function For An LSTM/GRU Hidden State
 * Here we define the hidden state weights and initialize hidden state with zero weights,and move them to GPU for training if available.
-* The output of the model should be the last batch of word scores after a complete sequence has been processed.That is,for each input sequence of words, we only want to output     the word scores for a single, most likely, next word.
 ### Applying Forward And Back Propogation
 * Here we implement this function after Creating new variables for the hidden state(variables in tuple form),by accumulating zero gradients,moving the input and output tensors
   to train them on GPU,if it's available,get the output for input and hidden state from the model,calculate the loss,perform a back propagation step,clip gradients in order to     prevent "exploding gradients" problem,update the weights using optimization function and finally get the average loss over a batch and the hidden state.
