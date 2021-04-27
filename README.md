@@ -22,6 +22,7 @@ The objective of this Project is to Generate our own Seinfeld TV scripts using R
 * Training The Neural Network
 * Model Results
 * Model Implementation
+* Installation
 
 # Introduction
 
