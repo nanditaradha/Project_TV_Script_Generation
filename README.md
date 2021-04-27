@@ -26,8 +26,22 @@ The objective of this Project is to Generate our own Seinfeld TV scripts using R
 
 Writing scripts for a TV program is a mundane task.Imagine writing every word which comes out from every character in a movie or a tv drama inorder to generate a complete script.Instead of writing manually,here we are going to generate a TV script using Long Short Term Memory Networks – usually just called “LSTMs” – which are a special kind of RNN,capable of learning long-term dependencies.As These networks are capable of predicting and generating the next words that we are intended to generate sequentially in the script.We will train these networks by feeding them an existing TV script. Once the networks are trained we will generate a new TV script.
 
-LSTMs
-I am using LSTMs networks to generate a TV script, which is a special type of Recurrent neural network. Our training data is a small subset of Seinfield Dataset. Seinfield is a TV series having 9 seasons. The dataset contains the conversation between various characters.In this case,I used Recurrent Neural Network(RNN) implemented in PyTorch.
+## LSTMs
+I am using LSTMs networks to generate a TV script, which is a special type of Recurrent neural network. Our training data is a small subset of Seinfield Dataset.Seinfield is a TV series having 9 seasons. The dataset contains the conversation between various characters.In this case,I used Recurrent Neural Network(RNN) implemented in PyTorch.
+
+# Data Description
+
+Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV series having 9 seasons.The dataset contains the conversation between various characters.
+
+# Data Pre-Processing
+## Implemented the following Pre-processing Functions on the Dataset
+
+### Lookup Table
+* Created a Lookup Table with two dictionaries (Word to ID and ID to Word) used for word embeddings
+### Tokenize Punctuation
+* Splitted the scripts into word arrays and implemented a function for tokenizing punctuation.The punctuation becomes like another word in the word array. This makes it easier     for the RNN to predict the next word.
+
+
 
 
 
