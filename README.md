@@ -26,14 +26,14 @@ The objective of this Project is to Generate our own Seinfeld TV scripts using R
 
 # Introduction
 
-Writing scripts for a TV program is a mundane task.Imagine writing every word which comes out from every character in a movie or a tv drama inorder to generate a complete script.Instead of writing manually,here we are going to generate a TV script using Long Short Term Memory Networks – usually just called “LSTMs” – which are a special kind of RNN,capable of learning long-term dependencies.As These networks are capable of predicting and generating the next words that we are intended to generate sequentially in the script.We will train these networks by feeding them an existing TV script. Once the networks are trained we will generate a new TV script.
+Writing scripts for a TV program is a mundane task.Imagine writing every word which comes out from every character in a movie or a tv drama inorder to generate a complete script.Instead of writing manually,here we are going to generate a TV script using Long Short Term Memory Networks – usually just called “LSTMs” – which are a special kind of RNN,capable of learning long-term dependencies.As These networks are capable of predicting and generating the next words that we are intended to generate sequentially in the script.We will train these networks by feeding them an existing TV script.Once the networks are trained we will generate a new TV script.
 
 ## LSTMs
-I am using LSTMs networks to generate a TV script, which is a special type of Recurrent neural network. Our training data is a small subset of Seinfield Dataset.Seinfield is a TV series having 9 seasons. The dataset contains the conversation between various characters.In this case,I used Recurrent Neural Network(RNN) implemented in PyTorch.
+I used LSTMs networks to generate a TV script, which is a special type of Recurrent neural network. Our training data is a small subset of Seinfield Dataset.Seinfield is a TV series having 9 seasons.The dataset contains the conversation between various characters.In this case,I used Recurrent Neural Network(RNN) implemented in PyTorch.
 
 # Data Description
 
-Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV series having 9 seasons.The dataset contains the conversation between various characters.
+Here we are provided with a small subset of Seinfield Dataset.Seinfield is a TV series having 9 seasons.The dataset contains the conversation between various characters.
 
 # Data Pre-Processing
 ## Implemented The Following Pre-Processing Functions On The Dataset
@@ -68,7 +68,7 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * Setting the hyperparameters which are sequence_length,batch_size,n_layers,learning_rate,embedding_dim,hidden_dim,num_epochs etc for optimal loss values.
 
 # Model Results
-* After Training the Neural Network on the preprocessed data, the model achieved a loss rate of 3.16(which is < 3.5) after 10 epochs.
+* After Training the Neural Network on the preprocessed data,the model achieved a loss rate of 3.16(which is < 3.5) after 10 epochs.
 
 # Model Implementation
 * The trained and saved Neural Network was then used to generate a new, "fake" Seinfeld TV script.
@@ -81,7 +81,7 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * Word2Vector
 
 # Installation
-## a. Installation
+## a.Installation
 
 Download Anaconda
 
@@ -96,9 +96,9 @@ Download Anaconda
 [lin64]: https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 [lin32]: https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86.sh
 
-**Install** [Anaconda](https://docs.anaconda.com/anaconda/install/) on your machine. Detailed instructions:
+**Install** [Anaconda](https://docs.anaconda.com/anaconda/install/) on your machine.Detailed instructions:
 
-## b. Create And Activate The Environment
+## b.Create And Activate The Environment
 
 Please go though this [doc](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before you creating an environment.
 After that create a environment using following command
@@ -114,20 +114,20 @@ activate deep-learning
 ```
 
 #### Git And Version Control
-These instructions also assume you have `git` installed for working with Github from a terminal window, but if you do not, you can download that first with the command:
+These instructions also assume you have `git` installed for working with Github from a terminal window,but if you do not,you can download that first with the command:
 ```
 conda install git
 ```
 
 **Now, You Can Create A Local Version Of The Project**
 
-1. Clone the repository, and navigate to the downloaded folder. This may take a minute or two to clone due to the included image data.
+1. Clone the repository,and navigate to the downloaded folder.This may take a minute or two to clone due to the included image data.
 ```
 git clone https://github.com/nanditaradha/Project_Tv_Script_Generation.git
 cd TV-Script-Generation
 ```
 
-2. Install PyTorch and torchvision; this should install the latest version of PyTorch.
+2. Install PyTorch and torchvision;this should install the latest version of PyTorch.
 	
 	- __Linux__ or __Mac__: 
 	```
@@ -139,7 +139,7 @@ cd TV-Script-Generation
 	pip install torchvision
 	```
 
-3. Install a few required pip packages, which are specified in the requirements text file (including OpenCV).
+3. Install a few required pip packages,which are specified in the requirements text file (including OpenCV).
 ```
 pip install -r requirements.txt
 ```
@@ -148,7 +148,7 @@ Or
 conda install --yes --file requirements.txt
 ```
 
-4. That's it!, Now run the project using following command, check your default browser and open dlnd_tv_script_generation.ipynb file
+4. That's it!,Now run the project using following command, check your default browser and open dlnd_tv_script_generation.ipynb file
 
 ```
 jupyter notebook
