@@ -97,7 +97,7 @@ Download Anaconda
 
 **Install** [Anaconda](https://docs.anaconda.com/anaconda/install/) on your machine. Detailed instructions:
 
-## b. Create and Activate the Environment
+## b. Create And Activate The Environment
 
 Please go though this [doc](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) before you creating an environment.
 After that create a environment using following command
@@ -112,17 +112,17 @@ Then activate the environment using following command
 activate deep-learning
 ```
 
-#### Git and version control
+#### Git And Version Control
 These instructions also assume you have `git` installed for working with Github from a terminal window, but if you do not, you can download that first with the command:
 ```
 conda install git
 ```
 
-**Now, you can create a local version of the project**
+**Now, You Can Create A Local Version Of The Project**
 
 1. Clone the repository, and navigate to the downloaded folder. This may take a minute or two to clone due to the included image data.
 ```
-git clone https://github.com/koushik-elite/TV-Script-Generation.git
+git clone https://github.com/nanditaradha/Project_Tv_Script_Generation.git
 cd TV-Script-Generation
 ```
 
@@ -147,7 +147,7 @@ Or
 conda install --yes --file requirements.txt
 ```
 
-4. That's it!, Now run the project using following command, check you default browser and open dlnd_tv_script_generation.ipynb file
+4. That's it!, Now run the project using following command, check your default browser and open dlnd_tv_script_generation.ipynb file
 
 ```
 jupyter notebook
