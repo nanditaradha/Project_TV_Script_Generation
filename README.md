@@ -35,7 +35,7 @@ I am using LSTMs networks to generate a TV script, which is a special type of Re
 Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV series having 9 seasons.The dataset contains the conversation between various characters.
 
 # Data Pre-Processing
-## Implemented the following Pre-processing Functions on the Dataset
+## Implemented The Following Pre-Processing Functions On The Dataset
 
 ### Lookup Table
 * Created a Lookup Table with two dictionaries (Word to ID and ID to Word) used for word embeddings
@@ -71,7 +71,14 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * After Training the neural network on the preprocessed data, Achieved loss rate of 3.16(which is < 3.5) after 10 epochs.
 
 # Model Implementation
-* The trained and saved Neural Network was then used to generate a new, "fake" Seinfeld TV script
+* The trained and saved Neural Network was then used to generate a new, "fake" Seinfeld TV script.
+
+# Topics Related To The Project
+* Recurrent Neural Networks
+* Tensorflow
+* Forward And Backward Propogation
+* Embeddings
+* Word2Vector
 
 
 
