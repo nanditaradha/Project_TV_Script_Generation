@@ -21,6 +21,7 @@ The objective of this Project is to Generate our own Seinfeld TV scripts using R
 * Building The Neural Network
 * Training The Neural Network
 * Model Results
+* Model Implementation
 
 # Introduction
 
@@ -48,35 +49,33 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * Implemented the batch_data function to batch words data into chunks of size batch_size using the TensorDataset and DataLoader classes.
 ### Creating Data Loaders
 * Created Data Loaders after creating feature_tensors and target_tensors of the correct size and content for a given sequence_length.
-### Initializing RNN Model and Defining Layers
+### Initializing RNN Model And Defining Layers
 * Implemented an RNN using PyTorch's [Module Class](https://pytorch.org/docs/master/nn.html#torch.nn.Module).Here we may choose to use a GRU or an LSTM.To complete the RNN,       we will have to implement the following functions for the class:
-#### __init__ - The initialize function.
-* The initialize function will create the layers of the neural network and will save them to the class.
-#### init_hidden - The initialization function for an LSTM/GRU hidden state
-#### forward - Forward propagation function.
-* The forward propagation function will use these layers to run forward propagation and generate an output and a hidden state.
-### Forward And Back Propogation
-* Here we use the RNN class that was implemented to apply forward and back propagation.This function will be called,iteratively,in the training loop and it should return the       average loss over a batch and the hidden state.
-### Initialize The Hidden State Of An LSTM/GRU
-*
+#### __init__ - The Initialize Function.
+* The initialize function will set the class variables output_size,hidden_dim,n_layers and creates by defining the model layers of the neural network which are embedding_dim and   LSTM and Linear layer which will save them to the class.
+#### forward - Forward Propagation Function.
+* The forward function is implemented by setting the batch_size,by defining embeddings and lstm_out layers,stacking all the lstm outputs,by calculating fully-connected layer       output,by reshaping the fully-connected layer output to be batch size first,by getting the last batch of labels and finally getting one batch of output word scores and the       hidden state.
+* The output of the model should be the last batch of word scores after a complete sequence has been processed.That is,for each input sequence of words, we only want to output     the word scores for a single, most likely, next word.
+#### init_hidden - The Initialization Function For An LSTM/GRU Hidden State
+* Here we define the hidden state weights and initialize hidden state with zero weights,and move them to GPU for training if available.
+* The output of the model should be the last batch of word scores after a complete sequence has been processed.That is,for each input sequence of words, we only want to output     the word scores for a single, most likely, next word.
+### Applying Forward And Back Propogation
+* Here we implement this function after Creating new variables for the hidden state(variables in tuple form),by accumulating zero gradients,moving the input and output tensors
+  to train them on GPU,if it's available,get the output for input and hidden state from the model,calculate the loss,perform a back propagation step,clip gradients in order to     prevent "exploding gradients" problem,update the weights using optimization function and finally get the average loss over a batch and the hidden state.
+* Or in simple terms we can say that,Here we use the RNN class that was implemented to apply forward and back propagation.This function will be called,iteratively,in the           training loop and it should return the average loss over a batch and the hidden state.
+
+# Training The Neural Network
+* Setting the hyperparameters which are sequence_length,batch_size,n_layers,learning_rate,embedding_dim,hidden_dim,num_epochs etc for optimal loss values.
+
+# Model Results
+* After Training the neural network on the preprocessed data, Achieved loss rate of 3.16(which is < 3.5) after 10 epochs.
+
+# Model Implementation
+* The trained and saved Neural Network was then used to generate a new, "fake" Seinfeld TV script
 
 
 
 
 
-In this project, we are going to generate a TV script using LSTM Network. We will train these networks by feeding them an existing TV script. Once the networks are trained we will generate a new TV script.s
 
 
-
-Language is in many ways the seed in intelligence. We as humans use language to convey informations between each other. But unfortunately, computers can't really understand human languages. New breatktrough in AI has led to more technolgies in language understanding called Natural Language Processing (NLP).
-
-
-Language communication can be done in many ways.We as humans use language to convey informations between each other.But unfortunately,computers can't really understand human languages.New breakthrough in AI has led to more technolgies in language understanding called Natural Language Processing (NLP).
-
-# Natural Language Processing
-
-NLP is the study that focuses on the interactions between human language and computers. By using NLP, developers can organize and structure knowledge to perform tasks such as automatic summarization, translation, named entity recognition, relationship extraction, sentiment analysis, speech recognition, and topic segmentation.
-
-
-# Project Objective
-Generate your own Seinfeld TV scripts using RNNs.The input data was Seinfeld dataset of scripts from 9 seasons.The Neural Network you'll build will generate a new ,"fake" TV script, based on patterns it recognizes in this training data.
