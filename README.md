@@ -68,7 +68,7 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 * Setting the hyperparameters which are sequence_length,batch_size,n_layers,learning_rate,embedding_dim,hidden_dim,num_epochs etc for optimal loss values.
 
 # Model Results
-* After Training the neural network on the preprocessed data, Achieved loss rate of 3.16(which is < 3.5) after 10 epochs.
+* After Training the Neural Network on the preprocessed data, the model achieved a loss rate of 3.16(which is < 3.5) after 10 epochs.
 
 # Model Implementation
 * The trained and saved Neural Network was then used to generate a new, "fake" Seinfeld TV script.
