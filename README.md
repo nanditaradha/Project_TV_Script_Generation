@@ -41,6 +41,25 @@ Here we are provided with a small subset of Seinfield Dataset. Seinfield is a TV
 ### Tokenize Punctuation
 * Splitted the scripts into word arrays and implemented a function for tokenizing punctuation.The punctuation becomes like another word in the word array. This makes it easier     for the RNN to predict the next word.
 
+# Building The Neural Network
+## Implemented the following functions as core components for building the RNN
+
+### Batching The Data
+* Implemented the batch_data function to batch words data into chunks of size batch_size using the TensorDataset and DataLoader classes.
+### Creating Data Loaders
+* Created Data Loaders after creating feature_tensors and target_tensors of the correct size and content for a given sequence_length.
+### Initializing RNN Model and Defining Layers
+* Implemented an RNN using PyTorch's [Module Class](https://pytorch.org/docs/master/nn.html#torch.nn.Module).Here we may choose to use a GRU or an LSTM.To complete the RNN,       we will have to implement the following functions for the class:
+#### __init__ - The initialize function.
+* The initialize function will create the layers of the neural network and will save them to the class.
+#### init_hidden - The initialization function for an LSTM/GRU hidden state
+#### forward - Forward propagation function.
+* The forward propagation function will use these layers to run forward propagation and generate an output and a hidden state.
+### Forward And Back Propogation
+* Here we use the RNN class that was implemented to apply forward and back propagation.This function will be called,iteratively,in the training loop and it should return the       average loss over a batch and the hidden state.
+### Initialize The Hidden State Of An LSTM/GRU
+*
+
 
 
 
