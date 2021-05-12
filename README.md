@@ -121,7 +121,7 @@ conda install git
 
 **Now, You Can Create A Local Version Of The Project**
 
-1. Clone the repository,and navigate to the downloaded folder.This may take a minute or two to clone due to the included image data.
+1. Clone the repository,and navigate to the downloaded folder.This may take a minute or to clone due to the included image data.
 ```
 git clone https://github.com/nanditaradha/Project_Tv_Script_Generation.git
 cd TV-Script-Generation
